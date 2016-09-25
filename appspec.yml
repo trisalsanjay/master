@@ -2,11 +2,11 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu/myapp
+    destination: /myapp
 permissions:
-  - object: /home/ubuntu/myapp/startApp.sh
+  - object: /myapp/startApp.sh
     mode: 777
-#hooks:
-#  ApplicationStart:
-#    - location: startApp.sh
-#      timeout: 10
+hooks:
+  ApplicationStart:
+    - location: startApp.sh
+      timeout: 30
